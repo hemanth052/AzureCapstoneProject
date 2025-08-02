@@ -1,0 +1,29 @@
+
+---
+
+### 📁 `04-devops-jenkins-aks-pipeline/README.md`
+
+```markdown
+# Azure DevOps CI/CD Pipeline with Jenkins, Docker, GitHub, and AKS
+
+A complete CI/CD pipeline project involving:
+
+- **Jenkins Installed on Azure VM** (Master)
+- **2 Jenkins Agents** (Test and Prod VMs)
+- **Ansible for Node Configuration**
+- **GitHub Webhooks** to trigger builds
+
+Pipeline Flow:
+- Push to `develop` branch → triggers test job (build only)
+- Push to `master` branch → triggers full pipeline (build + deploy)
+- Docker image built and pushed to Azure Container Registry (ACR)
+- Image deployed to Azure Kubernetes Service (AKS)
+- App exposed via AKS Load Balancer
+
+Tools Used:
+- Jenkins
+- Ansible
+- Docker
+- GitHub
+- Azure CLI
+- AKS
